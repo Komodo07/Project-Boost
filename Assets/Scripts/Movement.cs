@@ -31,21 +31,16 @@ public class Movement : MonoBehaviour
     {
         float rotationInput = rotation.ReadValue<float>();
 
-        if (rotationInput < 0)
+        if (rotationInput != 0)
         {
-            ApplyRotation(rotationSpeed);
-        }
-
-        else if (rotationInput > 0)
-        {
-            ApplyRotation(-rotationSpeed);
-        }
+            ApplyRotation(rotationInput);
+        }        
     }
 
     private void ApplyRotation(float rotationThisFrame)
     {
         rb.freezeRotation = true;
-        transform.Rotate(Vector3.forward * Time.fixedDeltaTime * rotationThisFrame);
+        transform.Rotate(Vector3.forward * Time.fixedDeltaTime * rotationThisFrame * rotationSpeed);
         rb.freezeRotation = false;
     }
 
