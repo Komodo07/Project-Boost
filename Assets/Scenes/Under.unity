@@ -340,120 +340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8940559962704674459, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
   m_PrefabInstance: {fileID: 7814680212851216507}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1409776977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 737803312078222895, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-  m_PrefabInstance: {fileID: 7814680212851216507}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1409776981
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409776977}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dc6ec8eb096de9b41be10d03415e0de8, type: 3}
-  m_Resource: {fileID: 8300000, guid: dc6ec8eb096de9b41be10d03415e0de8, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1409776982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409776977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 279b7e2e997d2754ba42fa1b88df2f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1504070796
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +781,7 @@ Transform:
   m_GameObject: {fileID: 2014015881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.13, z: 0}
+  m_LocalPosition: {x: 5.25, y: 10.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -919,11 +805,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4421471713341277806, guid: 39c51c4a2351cbe46aeb3d266849d0ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 9.63
       objectReference: {fileID: 0}
     - target: {fileID: 4421471713341277806, guid: 39c51c4a2351cbe46aeb3d266849d0ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4421471713341277806, guid: 39c51c4a2351cbe46aeb3d266849d0ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1027,29 +913,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 713500020615190652, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 713500020615190652, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 737803312078222895, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
       propertyPath: m_Name
       value: Player Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766766166174024293, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      propertyPath: rotationSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766766166174024293, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      propertyPath: rotation.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Keyboard>/d
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766766166174024293, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      propertyPath: rotation.m_SingletonActionBindings.Array.data[2].m_Path
-      value: <Keyboard>/a
       objectReference: {fileID: 0}
     - target: {fileID: 8940559962704674459, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1094,13 +960,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 737803312078222895, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1409776982}
-    - targetCorrespondingSourceObject: {fileID: 737803312078222895, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1409776981}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
