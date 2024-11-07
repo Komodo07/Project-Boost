@@ -917,6 +917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 1710298058228574250, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
+      propertyPath: sceneLoadDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8940559962704674459, guid: e797c88e7e1fe43498f3385d33995e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.44
