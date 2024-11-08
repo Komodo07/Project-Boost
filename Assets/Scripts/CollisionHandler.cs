@@ -7,8 +7,10 @@ public class CollisionHandler : MonoBehaviour
 {
     int currentSceneIndex;
     [SerializeField] float sceneLoadDelay;
-    [SerializeField] AudioClip success;
-    [SerializeField] AudioClip deathExplosion;
+    [SerializeField] AudioClip successSFX;
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem deathParticles;
 
     AudioSource audioSource;
 
@@ -47,20 +49,18 @@ public class CollisionHandler : MonoBehaviour
     }
 
     private void StartCrashSequence()
-    {
-        isControllable = false;
-        audioSource.Stop();
-        GetComponent<Movement>().enabled = false;
-        audioSource.PlayOneShot(deathExplosion);
+    {        
+        DisablePlayer();
+        audioSource.PlayOneShot(deathSFX);
+        deathParticles.Play();
         Invoke(nameof(ReloadScene), sceneLoadDelay);        
-    }
-    
+    }    
+
     private void StartSuccessSequence()
     {
-        isControllable = false;
-        audioSource.Stop();
-        GetComponent<Movement>().enabled = false;
-        audioSource.PlayOneShot(success);
+        DisablePlayer();
+        audioSource.PlayOneShot(successSFX);
+        successParticles.Play();
         Invoke(nameof(DetermineFinishProgress), sceneLoadDelay);
     }
 
@@ -75,6 +75,13 @@ public class CollisionHandler : MonoBehaviour
         {
             GameOver();
         }        
+    }
+
+    private void DisablePlayer()
+    {
+        isControllable = false;
+        audioSource.Stop();
+        GetComponent<Movement>().enabled = false;
     }
 
     private void LoadNextScene(int nextSceneIndex)
