@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
@@ -15,6 +16,7 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
 
     bool isControllable = true;
+    bool isCollidable = true;
 
     private void Awake()
     {
@@ -22,9 +24,30 @@ public class CollisionHandler : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Update()
+    {
+        RespondtoDebugKeys();
+    }
+
+    private void RespondtoDebugKeys()
+    {
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+        {
+            int nextSceneIndex = currentSceneIndex + 1;
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                LoadNextScene(nextSceneIndex);
+            }
+        }
+        else if (Keyboard.current.cKey.wasPressedThisFrame)
+        {
+            isCollidable = !isCollidable;  
+        }
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        if (!isControllable)        
+        if (!isControllable || !isCollidable)        
             return;        
 
         switch (other.gameObject.tag)
